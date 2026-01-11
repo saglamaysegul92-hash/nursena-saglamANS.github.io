@@ -1,0 +1,193 @@
+
+
+
+@media (max-width: 600px) {
+  .galeri {
+   
+    grid-template-columns: 1fr;
+  }
+}
+ 
+        .product-grid {
+            display: grid;
+            /* Yan yana 4 sütun oluşturur, ekran küçülünce otomatik ayarlanır */
+            grid-template-columns: repeat(4, 1fr); 
+            /* Fotoğraflar arasındaki ince boşluk */
+            gap: 10px; 
+            padding: 10px;
+        }
+
+        
+
+        /* Ürün Bilgisi (Yazılar) */
+        .product-info {
+            margin-top: 8px;
+            font-size: 11px;
+            text-transform: uppercase;
+            color: #000;
+        }
+
+        .price {
+            font-weight: bold;
+            margin-top: 4px;
+        }
+
+
+       /* Ana konteyner: Sayfayı ikiye böler */
+.product-container {
+    display: flex;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Sol taraf: Resimler serbestçe aşağı kayar */
+.product-main-images {
+    width: 60%;
+    padding-right: 40px;
+}
+
+.product-main-images img {
+    width: 100%;
+    margin-bottom: 20px; /* Fotoğraflar arası boşluk */
+    display: block;
+}
+
+/* Sağ taraf: Bilgilerin sabit kalmasını sağlar */
+.product-sidebar {
+    width: 40%;
+}
+
+.sticky-content {
+    position: -webkit-sticky; /* Safari desteği */
+    position: sticky;
+    top: 50px; /* Sayfanın tepesinden ne kadar aşağıda sabitleneceği */
+    padding-left: 20px;
+}
+
+/* Zara Tarzı Yazı Tipleri */
+.stock-info {
+    font-size: 10px;
+    color: #666;
+    letter-spacing: 1px;
+}
+
+.product-title {
+    font-size: 18px;
+    font-weight: 400;
+    margin: 15px 0;
+    text-transform: uppercase;
+}
+
+.price-box {
+    margin-bottom: 30px;
+}
+
+.old-price {
+    text-decoration: line-through;
+    color: #888;
+    margin-right: 10px;
+}
+
+.current-price {
+    background-color: yellow; /* Görseldeki gibi vurgu */
+    font-weight: bold;
+}
+
+.add-button {
+    width: 100%;
+    background: white;
+    border: 1px solid #000;
+    padding: 12px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 12px;
+    margin-top: 20px;
+    transition: 0.3s;
+}
+
+.add-button:hover {
+    background: #000;
+    color: #fff;
+}
+
+
+/* Mobilde ürünlerin alt alta gelmesi için */
+@media (max-width: 768px) {
+    .product-grid {
+        display: flex;
+        flex-direction: column; /* Yan yana yerine alt alta dizer */
+        align-items: center;    /* Ürünleri ortalar */
+    }
+  }
+   /* Ürün Kartı */
+        .product-card {
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Fotoğraf Ayarları */
+        .product-card img {
+            width: 100%;
+            
+            height: auto;
+            display: block;
+            object-fit: cover;
+        }
+        .product-card:hover{
+transform: scale(1.05);
+transition: transform 0.4s ease;
+box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+
+
+
+.add-button {
+    width: 100%;
+    background-color: #000; /* Siyah şık bir buton */
+    color: #fff; /* Beyaz yazı */
+    padding: 15px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+}
+
+/* Üzerine gelince (Hover) efekti */
+.add-button:hover {
+    background-color: #333; /* Hafif griye döner */
+    transform: translateY(-2px); /* Çok hafif yukarı zıplar */
+}
+
+/* Dış site kartlarının genel stili */
+.custom-external-card {
+    border: 1px solid #eae6e6; /* Zarif, ince kenarlık */
+    border-radius: 0; /* Zara tarzı keskin köşeler */
+    transition: all 0.3s ease-in-out;
+    background-color: #703939;
+    padding: 20px;
+}
+
+.custom-external-card .card-title {
+    color: #121010;
+    font-size: 0.9rem;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+/* HOVER - Üzerine gelince efekt */
+.custom-external-card:hover {
+    background-color: hsl(286, 17%, 70%); /* Hafif gri arka plan */
+    border-color: #000; /* Kenarlık siyaha döner */
+    transform: scale(1.02); /* Çok hafif büyüme efekti */
+}
+
+.custom-external-card i {
+    color: #000;
+    font-size: 1.2rem;
+}
